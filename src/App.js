@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
-
-var req = new XMLHttpRequest();
-var URLhost = 'https://swapi.co/api/planets/'
+var URLhost = 'https://swapi.py4e.com/api/people/'
 
 class App extends React.Component {
+
+	componentDidMount(){
+		fetch(URLhost)
+		.then( response => response.json())
+		.then( people => console.log(people));
+	}
 
 	render(){
 		return (
