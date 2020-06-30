@@ -52,7 +52,7 @@ class Options extends React.Component{
 				</section>
 
 				<section>
-					<p>
+					<p id='animate'>
 						{this.state.randomFact}
 					</p>
 				</section>
