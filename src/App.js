@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-var URLhost = 'https://swapi.py4e.com/api/people/'
 
 class App extends React.Component {
 
-	componentDidMount(){
-		fetch(URLhost)
-		.then( response => response.json())
-		.then( people => console.log(people));
+	constructor(){
+		super();
+		this.state = {
+			field: '',
+			randomFact: [],
+			allFacts: ''
+		}
 	}
 
 	render(){
